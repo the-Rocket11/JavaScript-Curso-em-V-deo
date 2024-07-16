@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 16pt;
+
+        }
+        .calculator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: grey;
+            padding: 40px;
+            width: fit-content;
+            border-radius: 30px;
+            margin: 50px auto;
+            gap: 10px;
+        }
+        .display {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+        .screen {
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            background-color: white;
+            width: 160px;
+            height: 35px;
+            border-radius: 6px;
+        }
+        .display input[type='button'] {
+            width: 40px;
+            height: 35px;
+            font-size: 14pt;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .numbers {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            grid-template-columns: repeat(3, 0fr);  
+            margin: 0;  
+            padding: 0;
+        }
+        .signals {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .buttons input {
+            font-size: 14pt;
+            width: 45px;
+            height: 45px;
+        }
+        input {
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <div class="screen"></div>
+            <input class="btnClear" type="button" value="C">
+        </div>
+        <div class="buttons">
+            <div class="numbers">
+                <input onclick="addDisplay('1')" type="button" value="1">
+                <input onclick="addDisplay('2')"type="button" value="2">
+                <input onclick="addDisplay('3')"type="button" value="3">
+                <input onclick="addDisplay('4')"type="button" value="4">
+                <input onclick="addDisplay('5')"type="button" value="5">
+                <input onclick="addDisplay('6')"type="button" value="6">
+                <input onclick="addDisplay('7')"type="button" value="7">
+                <input onclick="addDisplay('0')"type="button" value="0">
+                <input onclick="addDisplay('8')"type="button" value="8">
+                <input onclick="addDisplay('9')"type="button" value="9">
+                <input class="btnResul"type="button" value="=">
+            </div>
+            <div class="signals">
+                <input onclick="addDisplay('+')"type="button" value="+">
+                <input onclick="addDisplay('-')"type="button" value="-">
+                <input onclick="addDisplay('*')"type="button" value="x">
+                <input onclick="addDisplay('/')"type="button" value="/">
+            </div>
+        </div>
+    </div>    
+    <script>
+        var screen = document.querySelector('.screen')
+        var clear = document.querySelector('.btnClear')
+        var resul 
+        
+        function addDisplay (value) {
+            screen.innerText.value += value
+
+        }
+
+    </script>
+</body>
+</html>

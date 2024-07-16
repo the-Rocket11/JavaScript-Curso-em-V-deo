@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h3>Nacionalidade</h3>
+    <div>
+        <h4>Em que país vives?</h4>
+        <input type="text"  class="txt" placeholder="País">
+        <input type="button" class="btn" value="Nacionalidade">
+        <div class="res"></div>
+    </div>
+    <script>
+        var pais = document.querySelector('.txt')
+        var btn = document.querySelector('.btn')
+        var res = document.querySelector('.res')
+
+        btn.addEventListener('click', () => {
+            res.innerHTML = `Vivendo no <strong>${pais.value}</strong><br>`
+            if (pais.value == 'Angola') {
+                res.innerHTML += `Você é <strong>ANGOLANO</strong>`
+            } else {
+                res.innerHTML += `Você é estrangeiro`
+            }
+        })
+
+    </script>   
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(139, 111, 68);
+    font: normal 12pt Arial
+}
+
+header {
+    text-align: center;
+    color: white;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    width: 400px;
+    border-radius: 20px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.534);
+    gap: 10px;
+    font-size: 12pt;
+}
+
+section .two {
+    text-align: center;
+}
+
+img {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    font-size: 10pt;
+    font-style: italic;
+}
